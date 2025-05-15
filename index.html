@@ -8,48 +8,73 @@
 <body>
     <style>
         h2{ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; background-color:aquamarine}
-        section{ 
-           font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif}
-        p{ font-family:'Arial Narrow Bold', sans-serif}
-    
-        body{ text-align: center;}
+        section{ align-items: center; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; width: 900px;}
+        p{ align-items: center ;font-family:'Arial Narrow Bold', sans-serif}
+        body{ display: flex; justify-content: center;  flex-direction:column; align-items:center;}
+        .skill { margin-bottom: 20px;}
+        .progress-bar { width: 80%; height: 20px; background-color:#ff6; border-radius: 10px;}
+        .progress {height: 80%;background-color: red;border-radius: 10px;}
+        #cabecalho{ width: 80px; display:flex; justify-content: center;}
+             
        </style>
 
-    <section> 
+    <section id="cabecalho">
+         <header>
+         <a href="#introduçao"> Introdução</a> 
+         <a href="#historico"> Histórico</a> 
+         <a href="#certificado"> Certificados</a> 
+         <a href="#interesses"> Interesses</a> 
+         <a href="#contato"> Contato</a> 
+        </header>
+        </section>
+
+    <section id= "introduçao"> 
         <hr>
         <h2> Introdução</h2> 
     <p> Sou Larissa Victória e estou cursando o curso online de Desenvolvimento Fullstack do programa Capacita Brasil, também faço curso técnico integrado ao ensino médio no IFCE com o curso de Telecomunicações</p> 
 </section>
 
-<section>
+<section id= "historico">
     <hr>
     <h2> Histórico</h2>
     <li> Cursando ensino médio integrado de Telecomunicações no IFCE </li>
     <li> Cursando curso online de Desenvolvimento Fullstack -Capacita Brasil</li>
+    <div class="skill">
+        <span>HTML</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 40%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>CSS</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 40%"></div>
+        </div>
+      </div>
 </section>
 
-<section>
+<section id= "certificado">
     <hr>
     <h2> Certificados</h2>
     <li> Curso de Atendimento ao Público - Fundação Bradesco</li>
     <li> Curso de Empreendedorismo - Fundação Bradesco</li>
 </section>
     
-<section> 
+<section id= "interesses"> 
     <hr>
     <h2> Interesses Profissionais</h2> 
 <p> Pretendo aprender programação e TI envolvendo redes de computadores para posteriormente trabalhar na área em uma empresa de tecnologia</p> 
 <p> E também pretendo ser capaz de criar códigos na área de Frontend e Backend</p>
 </section>
 
-<section> 
+<section id= "interesses"> 
     <hr>
     <h2> Interesses Pessoais</h2> 
 <p> Ser independente financeiramente, formar uma familía e ser capaz de viajar o mundo com o dinheiro que conquistei com meus estudos</p> 
 <p> Possivelmente ser graduada em um curso da área de TI (ADS, ciência da computação...)</p>
 </section>
 
-<section>
+<section id=" contato">
         <hr>
         <h2>Contato</h2>
         <p><b>Contato:</b> +55 (99) 99999-9999</p>
@@ -57,13 +82,13 @@
         <p><b>Whatsapp:</b> +55 (99) 99999-9999</p>
     </section>
 
-    <section>
+    <section  id="contato">
         <h2>Redes Sociais</h2>
         <p>Outras formas para entrar em contato:</p>
         <p>Me siga no <a href="https://www.instagram.com/">Instagram</a></p>
         <p> Me siga no <a href="https://github.com/LarissaVictoria9"> Github</a></p>
     </section>
-
+    
 
 
 
