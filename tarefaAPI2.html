@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="container"></div>
+<script>
+  const url="https://hp-api.onrender.com/api/characters"
+  async function getDatapersonagens(){
+    const requisicao= await fetch(url);
+    const dados= await requisicao.json();
+    return dados;
+  }
+   async function mostrardadosHtml(){
+    const personagens=  await getDatapersonagens();
+    const container= document.getElementById("container");
+    personagens.map((personagem) => {
+      let personagensdiv= document.createElement("div");
+      let personagensP= document.createElement("p");
+      let personagemimage= document.createElement("img");
+       personagensP.innerText= `nome: ${personagem.name}`
+       personagemimage.src= personagem.image;
+       personagensdiv.appendChild(personagemimage);
+       personagensdiv.appendChild(personagensP);
+       container.appendChild(personagensdiv);
+
+    });
+  }
+   mostrardadosHtml();
+</script>
+  </body>
+  
+</html>
+ 
