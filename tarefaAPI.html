@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="personagens"></div>
+   <script> 
+    const url="https://hp-api.onrender.com/api/characters"
+    
+    // Função de puxar informações
+    async function chamarApi() {
+      try {
+        const resposta = await fetch(url);
+        if (resposta.ok) {
+          const dados = await resposta.json();
+          const personagens = document.getElementById("personagens");
+
+          dados.forEach(personagem => {
+            const div = document.createElement("div");
+            div.classList.add("personagem");
+
+            div.innerHTML = `
+              <img src="${personagem.image}" alt="${personagem.name}">
+              <p><strong>Nome:</strong> ${personagem.name}</p>
+              <p><strong>Casa:</strong> ${personagem.house}</p>
+            `;
+
+            personagens.appendChild(div);
+          });
+
+        } else {
+          console.error("Erro ao carregar API:", resposta.status);
+        }
+      } catch (erro) {
+        console.error("Erro na requisição:", erro);
+      }
+    }
+
+    chamarApi(); // <- executa a função após defini-la
+  </script>
+</body>
+</html>
+ 
