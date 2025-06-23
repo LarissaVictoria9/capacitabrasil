@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> CONVITE </title>
+    </head>
+    <body> 
+        <p id="mensagem"></p>
+    </body>
+    <script>
+        const usuario ={
+            nome:"Larissa",
+            data: "10 de dezembro de 2024",
+            evento: "Workshop de JavaScript",
+            horario:"14h",
+            local:"Auditório Central.",
+            diasevento: 6,  
+        };
+    
+        function convite(usuario){
+        let escrever= `Olá ${usuario.nome} !! Estamos felizes em confirmar sua participação no evento 
+          ${usuario.evento}  Ele acontecerá no dia ${usuario.data} ás  ${usuario.horario}  no ${usuario.local}
+          Faltam apenas ${usuario.diasevento}  dias !! Nos vemos lá 🎉👨‍💻` 
+         return escrever;
+        }
+
+        document.getElementById("mensagem").innerText = convite(usuario);
+
+      </script>
+      <style>
+          p{ font-family: Verdana, Geneva, Tahoma, sans-serif; color:darkmagenta; font-size:20px;}
+      </style>
+</html>
